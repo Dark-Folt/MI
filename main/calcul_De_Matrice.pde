@@ -38,7 +38,6 @@ int[][] produit(int[][] m1, int[][] m2)
 
 
   int taille = m1.length;
-  int somme = 0;
 
   for (int i=0; i <taille; i++)
   {
