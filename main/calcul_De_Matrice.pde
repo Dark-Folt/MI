@@ -19,8 +19,7 @@ int[][] adjacence(Graphe g)
     matrice[g.lesAretes[i].initial][g.lesAretes[i].finale] = 1; //<>//
     matrice[g.lesAretes[i].finale][g.lesAretes[i].initial] = 1;
   }
-
-
+  
   return matrice;
 }
 
