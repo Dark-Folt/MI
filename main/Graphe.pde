@@ -53,10 +53,6 @@ Graphe saisie_graphe()
 
   for (int i=0; i < nbArete; i++)
   {
-    /*Arete a = new   Arete();
-     a.initial = askInteger("Entrer le point le initial");
-     a.finale = askInteger("Entre le point finale");
-     a.cout = 2.5;*/
     lesAretes[i] = saisirArete();
   }
 
