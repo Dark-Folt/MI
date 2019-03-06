@@ -42,21 +42,18 @@ int[][] produit(int[][] m1, int[][] m2)
 
   for (int i=0; i <taille; i++)
   {
-    for (int j=0; j < m2[i].length; j++)
+    for (int j=0; j < m2[0].length; j++)
     {
       for (int k = 0; k < m1[0].length; k++)
       {
-        somme += m1[i][k]*m2[k][j];
+        scalaire[i][j] += m1[i][k]*m2[k][j];
       }
 
-      scalaire[i][j] = somme;
-      somme = 0;
     }
   }
 
   return scalaire;
 }
-
 
 
 /*
