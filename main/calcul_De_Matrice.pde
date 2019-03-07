@@ -47,11 +47,20 @@ int[][] produit(int[][] m1, int[][] m2)
       {
         scalaire[i][j] += m1[i][k]*m2[k][j];
       }
-
     }
   }
 
   return scalaire;
+}
+
+int[][] puissance(int[][] m, int n)
+{
+  int ligne = m.length;
+  int cols = m[0].length;
+  int[][] result;
+  
+
+  return result = m;
 }
 
 
