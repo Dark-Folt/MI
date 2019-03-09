@@ -8,10 +8,12 @@ void setup()
   
   //afficher(adj);
   
-  int[][] a = {{1,2,3},{1,0,1},{2,1,3}};
-  int[][] b = {{1,1},{1,1},{1,1}};
+  int[][] a = {{1,1,1},{1,1,1},{1,1,1}};
+  int[][] b = {{1,1,1},{1,1,1},{1,1,1}};
   
-  int[][] r = produit(a,b);
+  //int[][] r = produit(a,b);
   
-  afficher(r);
+  int[][] m = puissance(b,0);
+  
+  afficherMatrice(m);
 }

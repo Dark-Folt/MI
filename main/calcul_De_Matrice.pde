@@ -53,23 +53,59 @@ int[][] produit(int[][] m1, int[][] m2)
   return scalaire;
 }
 
+
+
+/*
+Dans cette fonction je vais tout d'abord remplir une matrice carrée de 1,
+ Ensuite Je vais effectuer le produit de celui si n fois.
+ Apres chaque itération la matrice result sera donc de la forme n-1 jusqu'à n
+ Elle ne calcule la puissance 0
+ La matrice doit être carrée pour qu'on puisse faire une puissance
+ */
 int[][] puissance(int[][] m, int n)
 {
   int ligne = m.length;
   int cols = m[0].length;
-  int[][] result;
-  
+  int[][] result = new int[ligne][cols];
 
-  return result = m;
+
+
+  for (int i=0; i < ligne; i++)
+  {
+    for (int j=0; j < cols; j++)
+    {
+      result[i][j] = 1;
+    }
+  }
+
+
+  for (int i=1; i< n; i++)
+  {
+    result = produit(result, m);
+  }
+
+  return result;
+}
+
+/*
+
+Cette fonction calcule le nombre de chemin de longueur n entre deux sommets.
+
+*/
+int nbChemins(int[][] matrice, int n, int i, int j)
+{
+  
+  
+  return 0;
 }
 
 
 /*
-      Elle affiche la matrice ligne par ligne
+ Elle affiche la matrice ligne par ligne
  Cette fonction permet d'afficher notre matrice
  Mais ii faut importer le librairie java.util.Arrays
  */
-void afficher(int[][] matrice)
+void afficherMatrice(int[][] matrice)
 {
   for (int i=0; i< matrice.length; i++)
   {
