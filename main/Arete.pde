@@ -38,9 +38,9 @@ Arete saisirArete()
     finale = askInteger("Entre le sommet final:");
   } while (finale < 0);
 
-  do {
+  /*do {
     cout = askInteger("Entrer le cout:");
-  } while (cout < 0);
+  } while (cout < 0);*/
 
 
   return new Arete(initial, finale, cout);

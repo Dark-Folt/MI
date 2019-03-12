@@ -1,6 +1,5 @@
 import java.util.Arrays; //<>// //<>// //<>// //<>// //<>//
 
-
 /*
   Dans cette fonction nous allons crrer une matrice adjacence carrée
  
@@ -80,6 +79,7 @@ int[][] puissance(int[][] m, int n)
     }
   } else {
 
+    //Cela veut dire que n = 0
     for (int i=0; i < m.length; i++)
     {
       result[i][i] = 1;
@@ -101,9 +101,9 @@ Cette fonction calcule le nombre de chemin de longueur n entre deux sommets
 
 int nbChemins(int[][] matrice, int n, int i, int j)
 {
+  int[][] m = puissance(matrice,n);
 
-
-  return 0;
+  return m[i][j];
 }
 
 
