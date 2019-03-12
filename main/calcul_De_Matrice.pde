@@ -129,7 +129,7 @@ int[][] produit_mat_bool(int[][] m1, int[][] m2)
       for (int k = 0; k < m1[0].length; k++)
       {
         scalaire[i][j] += m1[i][k]*m2[k][j];
-        scalaire[i][j] = scalaire[i][j] != 0 ? 1:0; 
+        scalaire[i][j] = scalaire[i][j] != 0 ? 1:0; //Je verifie si il y'a une valeur je met 1 sinon 0
       }
     }
   }
