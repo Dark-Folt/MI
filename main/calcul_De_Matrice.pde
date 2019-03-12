@@ -1,4 +1,4 @@
-import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>//
+import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 
 /*
   Dans cette fonction nous allons crrer une matrice adjacence carrée
@@ -109,6 +109,8 @@ int nbChemins(int[][] matrice, int n, int i, int j)
 
 /*
   cette foncion calcul le produit de deux matrices booleennes
+ Ensuite apres avoir la valeur qu'il ya : soit 0 ou 1 
+ Je mets un 1 si c'est != 0 sinon 0
  */
 
 int[][] produit_mat_bool(int[][] m1, int[][] m2)
@@ -135,7 +137,34 @@ int[][] produit_mat_bool(int[][] m1, int[][] m2)
   }
 
   return scalaire;
+}
 
+
+/*
+  Cete fonction calcul la somme de deux matrices booleans
+ Elle met 0 si c'est 0 et 1 si c'est different de 0
+ */
+int[][] somme_mat_bool(int[][] m1, int[][] m2)
+{
+  if (m1[0].length != m2.length)
+  {
+    println("impossible de faire cette somme matricielle");
+    return null;
+  }
+
+  int[][] scalaire = new int[m1.length][m2[0].length];
+
+
+  for (int i=0; i <m1.length; i++)
+  {
+    for (int j=0; j < m2[0].length; j++)
+    {
+      scalaire[i][j] += m1[i][j]+m2[i][j];
+      scalaire[i][j] = scalaire[i][j] != 0 ? 1:0; //Je verifie si il y'a une valeur je met 1 sinon 0
+    }
+  }
+
+  return scalaire;
 }
 
 
