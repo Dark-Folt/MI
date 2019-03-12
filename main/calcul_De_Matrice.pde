@@ -38,13 +38,13 @@ int[][] produit(int[][] m1, int[][] m2)
 
   int taille = m1.length;
 
-  for (int i=1; i <taille; i++)
+  for (int i=0; i <taille; i++)
   {
-    for (int j=1; j < m2[0].length; j++)
+    for (int j=0; j < m2[0].length; j++)
     {
-      for (int k = 1; k < m1[0].length; k++)
+      for (int k = 0; k < m1[0].length; k++)
       {
-        scalaire[i-1][j-1] += m1[i-1][k-1]*m2[k-1][j-1];
+        scalaire[i][j] += m1[i][k]*m2[k][j];
       }
     }
   }
@@ -80,9 +80,9 @@ int[][] puissance(int[][] m, int n)
   } else {
 
     //Cela veut dire que n = 0
-    for (int i=1; i < m.length; i++)
+    for (int i=0; i < m.length; i++)
     {
-      result[i-1][i-1] = 1;
+      result[i][i] = 1;
     }
   }
 
@@ -102,6 +102,9 @@ Cette fonction calcule le nombre de chemin de longueur n entre deux sommets
 int nbChemins(int[][] matrice, int n, int i, int j)
 {
   int[][] m = puissance(matrice,n);
+  
+  println("//**/*/*/");
+  afficherMatrice(m);
 
   return m[i-1][j-1];
 }
