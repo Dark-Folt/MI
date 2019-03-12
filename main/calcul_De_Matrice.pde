@@ -36,9 +36,7 @@ int[][] produit(int[][] m1, int[][] m2)
   int[][] scalaire = new int[m1.length][m2[0].length];
 
 
-  int taille = m1.length;
-
-  for (int i=0; i <taille; i++)
+  for (int i=0; i <m1.length; i++)
   {
     for (int j=0; j < m2[0].length; j++)
     {
