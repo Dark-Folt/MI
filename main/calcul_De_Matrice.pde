@@ -13,10 +13,10 @@ int[][] adjacence(Graphe g)
   int taille = g.n;
   int[][] matrice = new int[taille][taille];
 
-  for (int i=0; i < g.nbAretes; i++)
+  for (int i=1; i < g.nbAretes; i++)
   {
-    matrice[g.lesAretes[i].initial][g.lesAretes[i].finale] = 1;
-    matrice[g.lesAretes[i].finale][g.lesAretes[i].initial] = 1;
+    matrice[g.lesAretes[i-1].initial][g.lesAretes[i-1].finale] = 1;
+    matrice[g.lesAretes[i-1].finale][g.lesAretes[i-1].initial] = 1;
   }
 
   return matrice;
@@ -38,13 +38,13 @@ int[][] produit(int[][] m1, int[][] m2)
 
   int taille = m1.length;
 
-  for (int i=0; i <taille; i++)
+  for (int i=1; i <taille; i++)
   {
-    for (int j=0; j < m2[0].length; j++)
+    for (int j=1; j < m2[1].length; j++)
     {
-      for (int k = 0; k < m1[0].length; k++)
+      for (int k = 1; k < m1[1].length; k++)
       {
-        scalaire[i][j] += m1[i][k]*m2[k][j];
+        scalaire[i-1][j-1] += m1[i-1][k-1]*m2[k-1][j-1];
       }
     }
   }
@@ -80,9 +80,9 @@ int[][] puissance(int[][] m, int n)
   } else {
 
     //Cela veut dire que n = 0
-    for (int i=0; i < m.length; i++)
+    for (int i=1; i < m.length; i++)
     {
-      result[i][i] = 1;
+      result[i-1][i-1] = 1;
     }
   }
 
@@ -103,7 +103,7 @@ int nbChemins(int[][] matrice, int n, int i, int j)
 {
   int[][] m = puissance(matrice,n);
 
-  return m[i][j];
+  return m[i-1][j-1];
 }
 
 
@@ -114,8 +114,8 @@ int nbChemins(int[][] matrice, int n, int i, int j)
  */
 void afficherMatrice(int[][] matrice)
 {
-  for (int i=0; i< matrice.length; i++)
+  for (int i=1; i< matrice.length; i++)
   {
-    println(Arrays.toString(matrice[i]));
+    println(Arrays.toString(matrice[i-1]));
   }
 }
