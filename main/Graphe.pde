@@ -1,7 +1,15 @@
+/*
+  Classe Graph
+ 3 proprietées:
+   -le nombre de sommets
+   -le nombre d'aretes du graphe
+   -un tableau d'aretes
+ */
+
 class Graphe
 {
-  int n; //nombre de sommeets du graphe
-  int nbAretes; //Nombre d'aretes du graphe
+  int n; 
+  int nbAretes; 
   Arete[] lesAretes;
 
   Graphe(int n, int nbAretes, Arete[] lesAretes)

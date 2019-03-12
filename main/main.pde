@@ -1,19 +1,24 @@
 
 void setup()
 {
-  //Graphe g = saisie_graphe();
-  //int[][] adj = adjacence(g);
-  
+  /*Graphe g = saisie_graphe();
+  int[][] adj = adjacence(g);
+  */
   println("------********");
   
   //afficher(adj);
   
-  int[][] a = {{1,1,1},{1,1,1},{1,1,1}};
-  int[][] b = {{1,1,1},{1,1,1},{1,1,1}};
+  int[][] a = {{3,1,5},{3,9,-2},{6,1,-1}};
+  int[][] b = {{2,8,4},{-6,3,1},{-2,1,5}};
   
   //int[][] r = produit(a,b);
   
-  int[][] m = puissance(b,0);
+  
+  //int[][] a = {{3,1,5},{3,9,-2},{6,1,-1}};
+  
+  int[][] m = puissance(a,5);
   
   afficherMatrice(m);
+  
+  exit();
 }

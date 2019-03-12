@@ -1,4 +1,4 @@
-import java.util.Arrays; //<>// //<>// //<>// //<>//
+import java.util.Arrays; //<>// //<>// //<>// //<>// //<>//
 
 
 /*
@@ -56,46 +56,53 @@ int[][] produit(int[][] m1, int[][] m2)
 
 
 /*
-Dans cette fonction je vais tout d'abord remplir une matrice carrée de 1,
- Ensuite Je vais effectuer le produit de celui si n fois.
- Apres chaque itération la matrice result sera donc de la forme n-1 jusqu'à n
- Elle ne calcule la puissance 0
- La matrice doit être carrée pour qu'on puisse faire une puissance
+Dans cette fonction je vais calciler la puissance d'une matrice
  */
 int[][] puissance(int[][] m, int n)
 {
-  int ligne = m.length;
-  int cols = m[0].length;
-  int[][] result = new int[ligne][cols];
+
+  int[][] result = new int[m.length][m.length];
 
 
-
-  for (int i=0; i < ligne; i++)
+  if (n != 0)
   {
-    for (int j=0; j < cols; j++)
+
+    if (n >= 2)
     {
-      result[i][j] = 1;
+      result = produit(m, m);
+
+      for (int i=0; i< n-2; i++)
+      {
+        result = produit(result, m);
+      }
+    } else {
+      return m;
+    }
+  } else {
+
+    for (int i=0; i < m.length; i++)
+    {
+      result[i][i] = 1;
     }
   }
 
 
-  for (int i=1; i< n; i++)
-  {
-    result = produit(result, m);
-  }
-
   return result;
 }
 
+
 /*
+Cette fonction calcule le nombre de chemin de longueur n entre deux sommets
+ donnée par l'user
+ 
+ Def: Un chemin dans un graphe est une suite d'arcs consécutifs
+ :La longueur d'un chemin est le nombre d'arcs constituant ce chemin
+ */
 
-Cette fonction calcule le nombre de chemin de longueur n entre deux sommets.
-
-*/
 int nbChemins(int[][] matrice, int n, int i, int j)
 {
-  
-  
+
+
   return 0;
 }
 

@@ -1,3 +1,11 @@
+/*
+  Classe Arete
+ 3 proprietées:
+ -le point initial
+ -le point final
+ -le cout
+ */
+
 class Arete
 {
   int initial;
@@ -30,9 +38,9 @@ Arete saisirArete()
     finale = askInteger("Entre le sommet final:");
   } while (finale < 0);
 
-  //do {
-  //  cout = askInteger("Entrer le cout:");
-  //} while (cout < 0);
+  do {
+    cout = askInteger("Entrer le cout:");
+  } while (cout < 0);
 
 
   return new Arete(initial, finale, cout);
