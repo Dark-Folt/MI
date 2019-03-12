@@ -20,7 +20,7 @@ void setup()
   
   //int i = nbChemins(adj,1,0,3);
   
-  //afficherMatrice();
+  afficherMatrice(adj);
   
   //println(i);
   

@@ -30,9 +30,9 @@ class Graphe
     this.n = g.n;
     this.nbAretes = g.nbAretes;
     this.lesAretes = new Arete[nbAretes];
-    for (int i=0; i < nbAretes; i++)
+    for (int i=1; i < nbAretes; i++)
     {
-      lesAretes[i] = g.lesAretes[i];
+      lesAretes[i-1] = g.lesAretes[i-1];
     }
   }
 }
