@@ -97,6 +97,8 @@ Cette fonction calcule le nombre de chemin de longueur n entre deux sommets
  
  Def: Un chemin dans un graphe est une suite d'arcs consécutifs
  :La longueur d'un chemin est le nombre d'arcs constituant ce chemin
+ 
+ et ensuite on retourne la valeur qu'il y'a dans la case[i][j] donné
  */
 
 int nbChemins(int[][] matrice, int n, int i, int j)
