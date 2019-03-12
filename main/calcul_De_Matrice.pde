@@ -25,7 +25,7 @@ int[][] adjacence(Graphe g)
 
 /*Cette fonction va nous permettre de calculer le produit d'une matrice
  Tout d'abord on va érfier */
-int[][] produit(int[][] m1, int[][] m2)
+int[][] produit_matrice(int[][] m1, int[][] m2)
 {
   if (m1[0].length != m2.length)
   {
@@ -55,7 +55,7 @@ int[][] produit(int[][] m1, int[][] m2)
 /*
 Dans cette fonction je vais calciler la puissance d'une matrice
  */
-int[][] puissance(int[][] m, int n)
+int[][] puissance_matrice(int[][] m, int n)
 {
 
   int[][] result = new int[m.length][m.length];
@@ -66,11 +66,11 @@ int[][] puissance(int[][] m, int n)
 
     if (n >= 2)
     {
-      result = produit(m, m);
+      result = produit_matrice(m, m);
 
       for (int i=0; i< n-2; i++)
       {
-        result = produit(result, m);
+        result = produit_matrice(result, m);
       }
     } else {
       return m;
@@ -83,7 +83,6 @@ int[][] puissance(int[][] m, int n)
       result[i][i] = 1;
     }
   }
-
 
   return result;
 }
@@ -101,12 +100,42 @@ Cette fonction calcule le nombre de chemin de longueur n entre deux sommets
 
 int nbChemins(int[][] matrice, int n, int i, int j)
 {
-  int[][] m = puissance(matrice,n);
-  
-  println("//**/*/*/");
-  afficherMatrice(m);
+  int[][] m = puissance_matrice(matrice, n);
 
   return m[i-1][j-1];
+}
+
+
+
+/*
+  cette foncion calcul le produit de deux matrices booleennes
+ */
+
+int[][] produit_mat_bool(int[][] m1, int[][] m2)
+{
+  if (m1[0].length != m2.length)
+  {
+    println("impossible de faire ce produit matricielle");
+    return null;
+  }
+
+  int[][] scalaire = new int[m1.length][m2[0].length];
+
+
+  for (int i=0; i <m1.length; i++)
+  {
+    for (int j=0; j < m2[0].length; j++)
+    {
+      for (int k = 0; k < m1[0].length; k++)
+      {
+        scalaire[i][j] += m1[i][k]*m2[k][j];
+        scalaire[i][j] = scalaire[i][j] != 0 ? 1:0; 
+      }
+    }
+  }
+
+  return scalaire;
+
 }
 
 

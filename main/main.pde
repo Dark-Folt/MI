@@ -1,8 +1,8 @@
 
 void setup()
 {
-  //Graphe g = saisie_graphe();
-  //int[][] adj = adjacence(g);
+  Graphe g = saisie_graphe();
+  int[][] adj = adjacence(g);
   
   println("------********");
   
@@ -18,11 +18,11 @@ void setup()
   
   //int[][] m = puissance(a,2);
   
-  //int i = nbChemins(adj,3,1,4);
+  int i = nbChemins(adj,2,1,4);
   
-  afficherMatrice(m);
+  //afficherMatrice(m);
   
-  //println(i);
+  println(i);
   
   exit();
 }
