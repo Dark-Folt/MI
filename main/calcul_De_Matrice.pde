@@ -169,6 +169,33 @@ int[][] somme_mat_bool(int[][] m1, int[][] m2)
 
 
 /*
+  Cette fonction me permet de vérifier si les deux matrices sont égaux 
+ */
+boolean egal_mat_bool(int[][] m1, int[][] m2)
+{
+
+  if (m1[0].length != m2.length)
+  {
+    println("impossible de faire cette somme matricielle");
+    return false;
+  }
+
+  for (int i=0; i < m1.length; i++)
+  {
+    for (int j=0; j < m2[0].length; j++)
+    {
+      if (m1[i][j] != m2[i][j])
+      {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+
+/*
  Elle affiche la matrice ligne par ligne
  Cette fonction permet d'afficher notre matrice
  Mais ii faut importer le librairie java.util.Arrays
