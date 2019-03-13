@@ -196,23 +196,33 @@ boolean egal_mat_bool(int[][] m1, int[][] m2)
 
 /*
   Cette fonction nous permet de calculer la matrice transitive d'un graphe
-  à l'aide de l'ago de warshal
-  
-  Le calcul de la fermeture transitive permet de répondre aux questions concernant l'existence de chemins entre x et y dans G et ceci pour tout couple de sommets x,y.
-*/
+ à l'aide de l'ago de warshal
+ 
+ Le calcul de la fermeture transitive permet de répondre aux questions concernant l'existence de chemins entre x et y dans G et ceci pour tout couple de sommets x,y.
+ */
 
 int[][] matrice_transitive(Graphe g)
 {
-  int[][] mat_trans = new int[g.n][g.n];
-  
+
   int[][] adj = adjacence(g);
-  
-  for(int i=0 ; i < g.n; i++)
+  int[][] mat_trans = puissance_matrice(adj, 0) ;
+
+
+  int[][] mt_p = adj;
+
+  int i=1;
+
+  while (!egal_mat_bool(mt_p, mat_trans))
   {
-    int[][] matrice = puissance_matrice(adj,i);
-    mat_trans = somme_mat_bool(mat_trans,matrice);
+    mt_p = mat_trans;
+    int[][] matrice = puissance_matrice(adj, i);
+    mat_trans = somme_mat_bool(mat_trans, matrice);
+
+    i++;
   }
-  return null;
+
+
+  return mat_trans;
 }
 
 
