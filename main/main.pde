@@ -9,7 +9,7 @@ void setup()
   //afficherMatrice(adj);
 
   int[][] a = {{0, 0, 0}, {1, 1, 1}, {1, 1, 1}};
-  int[][] c = {{0, 0, 0}, {1, 1, 1}, {1, 1, 1}};
+  int[][] c = {{0, 0, 0}, {1, 1, 1}, {1, 1, 0}};
 
   //int[][] b = {{2,8,4},{-6,3,1},{-2,1,5}};
 
@@ -28,7 +28,9 @@ void setup()
 
   int[][] y = somme_mat_bool(a, a);
 
-  afficherMatrice(y);
+  //afficherMatrice();
+  
+  println(egal_mat_bool(a,c));
 
   exit();
 }

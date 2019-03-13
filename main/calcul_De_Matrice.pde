@@ -194,6 +194,17 @@ boolean egal_mat_bool(int[][] m1, int[][] m2)
   return true;
 }
 
+/*
+  Cette fonction nous permet de calculer la matrice transitive d'un graphe
+  à l'aide de l'ago de warshal
+*/
+
+int[][] matrice_transitive(Graphe g)
+{
+  
+  return null;
+}
+
 
 /*
  Elle affiche la matrice ligne par ligne
