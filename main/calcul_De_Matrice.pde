@@ -1,4 +1,4 @@
-import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 
 /*
   Dans cette fonction nous allons crrer une matrice adjacence carrée
@@ -201,7 +201,12 @@ boolean egal_mat_bool(int[][] m1, int[][] m2)
 
 int[][] matrice_transitive(Graphe g)
 {
+  int[][] mat_trans = new int[g.n][g.n];
   
+  for(int i=1 ; i < g.n; i++)
+  {
+    
+  }
   return null;
 }
 
