@@ -160,7 +160,7 @@ int[][] somme_mat_bool(int[][] m1, int[][] m2)
     for (int j=0; j < m2[0].length; j++)
     {
       scalaire[i][j] += m1[i][j]+m2[i][j];
-      scalaire[i][j] = scalaire[i][j] != 0 ? 1:0; //Je verifie si il y'a une valeur je met 1 sinon 0
+      scalaire[i][j] = scalaire[i][j] != 0 ? 1:0; //Je verifie si la valeur est different de 0, je met 1 sinon 0
     }
   }
 
