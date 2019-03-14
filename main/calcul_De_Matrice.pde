@@ -201,6 +201,11 @@ boolean egal_mat_bool(int[][] m1, int[][] m2)
  Le calcul de la fermeture transitive permet de répondre aux questions concernant l'existence de chemins entre x et y dans G et ceci pour tout couple de sommets x,y.
  */
 
+/*
+Cette fonction va me permetre de calculer la fermeture transitive d'une matrice
+Je vais prendre la matrice adj. 
+Tant que la matrice suivante n'est pas égale à la matrice precedente, je continue
+*/
 int[][] matrice_transitive(Graphe g)
 {
 
