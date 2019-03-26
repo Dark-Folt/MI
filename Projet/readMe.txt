@@ -35,4 +35,4 @@ Colorier un graphe c’est associer à tout sommet une couleur telle que deux so
 
 Le plus petit nombre de couleurs nécessaire pour colorier un graphe s’appelle le nombre chromatique du graphe.
 
-
+Oui 
