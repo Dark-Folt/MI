@@ -15,9 +15,9 @@ int[][] adjacence(Graphe g)
 
   for (int i=0; i < g.nbAretes; i++)
   {
-    matrice[g.lesAretes[i].initial-1][g.lesAretes[i].finale-1] = 1;
-    matrice[g.lesAretes[i].finale-1][g.lesAretes[i].initial-1] = 1;
-  }
+    matrice[g.lesAretes[i].initial.numero-1][g.lesAretes[i].finale.numero-1] = 1;
+    matrice[g.lesAretes[i].finale.numero-1][g.lesAretes[i].initial.numero-1] = 1;
+  }  
 
   return matrice;
 }
@@ -203,9 +203,9 @@ boolean egal_mat_bool(int[][] m1, int[][] m2)
 
 /*
 Cette fonction va me permetre de calculer la fermeture transitive d'une matrice
-Je vais prendre la matrice adj. 
-Tant que la matrice suivante n'est pas égale à la matrice precedente, je continue
-*/
+ Je vais prendre la matrice adj. 
+ Tant que la matrice suivante n'est pas égale à la matrice precedente, je continue
+ */
 int[][] matrice_transitive(Graphe g)
 {
 

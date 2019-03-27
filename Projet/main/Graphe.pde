@@ -12,6 +12,7 @@ class Graphe
   int nbAretes; 
   Arete[] lesAretes;
 
+
   Graphe(int n, int nbAretes, Arete[] lesAretes)
   {
     this.n = n;
@@ -36,14 +37,23 @@ class Graphe
     }
   }
 
+
+
   //cette fonctino nous petmet d'avoir la matrice adjacence
   int[][] get_matrice_adjacence()
   {
     int[][] mat = new int[n][n];
-    for (Arete a : lesAretes)
+    /*for (Arete a : lesAretes)
     {
-      mat[a.initial.numero-1][a.finale.numero-1] = 1;
-      mat[a.finale.numero-1][a.initial.numero-1] = 1;
+      mat[a.initial.numero - 1][a.finale.numero - 1] = 1;
+      mat[a.finale.numero - 1][a.initial.numero - 1] = 1;
+    }*/
+    
+    for(int i=1; i < lesAretes.length; i++)
+    {
+      mat[lesAretes[i].initial.numero-1][lesAretes[i].finale.numero-1] = 1;
+      mat[lesAretes[i].finale.numero-1][lesAretes[i].initial.numero-1] = 1;
+     
     }
     return mat;
   }
@@ -109,6 +119,7 @@ Graphe saisie_graphe()
   {
     lesAretes[i] = saisirArete();
   }
+
 
   return new Graphe(n, nbArete, lesAretes);
 }
