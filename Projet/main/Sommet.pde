@@ -32,7 +32,7 @@ class Sommet
   {
     this.voisins.add(v);
   }
-  
+
   void updateDegre()
   {
     this.degre ++;
@@ -47,12 +47,12 @@ class Sommet
 /*
   Cette fonction va nous permettre de saisir un sommet et on va au prealable vérifier si l'user à mit une bonne valeur
  */
-Sommet saisirSommet()
+Sommet saisirSommet(String msg)
 {
   int numero;
 
   do {
-    numero  = askInteger("Entrer le numéro du sommet");
+    numero  = askInteger(msg);
   } while (numero < 0);
 
   return new Sommet(numero);

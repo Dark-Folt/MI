@@ -27,7 +27,6 @@ class Arete
     /*Je vais ajouter l'initale comme voisin du finale
      et finale comme voisin de initiale
      */
-
     initial.ajouterVoisin(finale);
     finale.ajouterVoisin(initial);
   }
@@ -38,14 +37,13 @@ class Arete
 //Cette fonction nous permet de saisir une arete
 Arete saisirArete()
 {
-  Sommet initial = saisirSommet();  
-  Sommet finale = saisirSommet(); 
+
+  Sommet initial = saisirSommet("Entrer le sommet initiale");
+  Sommet finale = saisirSommet("Entre le sommet finale");
 
   float cout = 0;
-
   /*do {
    cout = askInteger("Entrer le cout:");
    } while (cout < 0);*/
-
   return new Arete(initial, finale, cout);
 }
