@@ -23,3 +23,12 @@ class Sommet
     this.voisins = new ArrayList();
   }
 }
+
+/*
+  Cette fonctin va nous permettre de saisir un sommet
+*/
+Sommet saisirSommet()
+{
+  int numero = askInteger("Entrer le numéro du sommet");
+  return new Sommet(numero);
+}

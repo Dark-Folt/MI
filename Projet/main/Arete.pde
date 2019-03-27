@@ -27,7 +27,11 @@ class Arete
 //Cette fonction nous permet de saisir une arete
 Arete saisirArete()
 {
-  int initial, finale;
+
+  Sommet initial;  
+  Sommet finale;
+  int initial.numero, finale.numero;
+
   float cout = 0;
   do {
     initial = askInteger("Entrer le sommet initial:");
