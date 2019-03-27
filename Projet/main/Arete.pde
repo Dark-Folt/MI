@@ -8,11 +8,12 @@
 
 class Arete
 {
-  int initial;
-  int finale;
+  Sommet initial;  
+  Sommet finale;
+
   float cout;
 
-  Arete(int initial, int finale, float cout)
+  Arete(Sommet initial, Sommet finale, float cout)
   {
     this.initial = initial;
     this.finale = finale;
@@ -21,7 +22,7 @@ class Arete
 }
 
 
-            //--------------------------------------------Fonction liéé a la classe Arete
+//--------------------------------------------Fonction liéé a la classe Arete
 
 //Cette fonction nous permet de saisir une arete
 Arete saisirArete()
@@ -37,8 +38,8 @@ Arete saisirArete()
   } while (finale < 0);
 
   /*do {
-    cout = askInteger("Entrer le cout:");
-  } while (cout < 0);*/
+   cout = askInteger("Entrer le cout:");
+   } while (cout < 0);*/
 
 
   return new Arete(initial, finale, cout);

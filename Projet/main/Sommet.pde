@@ -10,15 +10,15 @@
 
 class Sommet
 {
-  int id;
+  int numero;
   int degre;
   int couleur;
   ArrayList<Sommet>voisins;
 
 
-  Sommet(int id)
+  Sommet(int numero)
   {
-    this.id = id;
+    this.numero = numero;
     this.degre = 0;
     this.voisins = new ArrayList();
   }
