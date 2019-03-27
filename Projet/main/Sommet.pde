@@ -9,7 +9,7 @@
  
  
  Les fonctions:
- -ajouterVoisin: permet d'ajouter un voisin au sommet
+ -ajouterVoisin: permet d'ajouter un voisin du sommet dans la liste des voisins
  -getVoisins: nous renvoie une list contenant tout les voisins du sommet actuel
  */
 
