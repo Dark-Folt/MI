@@ -6,6 +6,10 @@
  son degre qui sera biensure égale à 0
  un numero attribué à la couleur à 0 
  Une list contenant tout les voisins ce dernier pour mieux faire le choix des couleurs
+ 
+ 
+ Les fonctions:
+   -getVoisins: nous renvoie une list contenant tout les voisins du sommet actuel
  */
 
 class Sommet
@@ -21,6 +25,12 @@ class Sommet
     this.numero = numero;
     this.degre = 0;
     this.voisins = new ArrayList();
+  }
+  
+  
+  ArrayList<Sommet> getVoisins()
+  {
+    return null;
   }
 }
 

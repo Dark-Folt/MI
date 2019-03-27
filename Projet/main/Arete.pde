@@ -21,7 +21,6 @@ class Arete
   }
 }
 
-
 //--------------------------------------------Fonction liéé a la classe Arete
 
 //Cette fonction nous permet de saisir une arete
