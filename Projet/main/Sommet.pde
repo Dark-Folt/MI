@@ -32,6 +32,11 @@ class Sommet
   {
     this.voisins.add(v);
   }
+  
+  void updateDegre()
+  {
+    this.degre ++;
+  }
 
   ArrayList<Sommet> getVoisins()
   {

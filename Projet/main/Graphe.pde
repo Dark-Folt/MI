@@ -21,7 +21,7 @@ class Graphe
     lesAretes = new Arete[nbAretes];
     for (int i=0; i < nbAretes; i++)
     {
-      lesAretes[i] = lesAretes[i];
+      this.lesAretes[i] = lesAretes[i];
     }
   }
 
@@ -42,8 +42,8 @@ class Graphe
     int[][] mat = new int[n][n];
     for (Arete a : lesAretes)
     {
-      mat[a.initial-1][a.finale-1] = 1;
-      mat[a.finale-1][a.initial-1] = 1;
+      mat[a.initial.numero-1][a.finale.numero-1] = 1;
+      mat[a.finale.numero-1][a.initial.numero-1] = 1;
     }
     return mat;
   }
@@ -67,10 +67,10 @@ class Graphe
     }
 
     /*while (adj[index][index] == 0 && index < adj.length)
-    {
-      complet = true;
-      index ++;
-    }*/
+     {
+     complet = true;
+     index ++;
+     }*/
 
     return complet;
   }
