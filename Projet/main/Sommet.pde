@@ -9,6 +9,7 @@
  
  
  Les fonctions:
+ -ajouterVoisin: permet d'ajouter un voisin au sommet
  -getVoisins: nous renvoie une list contenant tout les voisins du sommet actuel
  */
 
@@ -27,6 +28,10 @@ class Sommet
     this.voisins = new ArrayList();
   }
 
+  void ajouterVoisin(Sommet v)
+  {
+    this.voisins.add(v);
+  }
 
   ArrayList<Sommet> getVoisins()
   {

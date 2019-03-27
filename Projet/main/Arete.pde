@@ -19,6 +19,8 @@ class Arete
     this.finale = finale;
     this.cout = cout;
   }
+  
+  
 }
 
 //--------------------------------------------Fonction liéé a la classe Arete
