@@ -9,7 +9,7 @@
  
  
  Les fonctions:
-   -getVoisins: nous renvoie une list contenant tout les voisins du sommet actuel
+ -getVoisins: nous renvoie une list contenant tout les voisins du sommet actuel
  */
 
 class Sommet
@@ -26,11 +26,11 @@ class Sommet
     this.degre = 0;
     this.voisins = new ArrayList();
   }
-  
-  
+
+
   ArrayList<Sommet> getVoisins()
   {
-    return null;
+    return this.voisins;
   }
 }
 
