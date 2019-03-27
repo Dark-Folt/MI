@@ -25,10 +25,15 @@ class Sommet
 }
 
 /*
-  Cette fonctin va nous permettre de saisir un sommet
-*/
+  Cette fonction va nous permettre de saisir un sommet et on va au prealable vérifier si l'user à mit une bonne valeur
+ */
 Sommet saisirSommet()
 {
-  int numero = askInteger("Entrer le numéro du sommet");
+  int numero;
+
+  do {
+    numero  = askInteger("Entrer le numéro du sommet");
+  } while (numero < 0);
+
   return new Sommet(numero);
 }
