@@ -33,15 +33,17 @@ class Sommet
     this.voisins.add(v);
   }
 
-  void updateDegre()
-  {
-    this.degre ++;
-  }
-
   ArrayList<Sommet> getVoisins()
   {
     return this.voisins;
   }
+}
+
+
+void update_degre(Sommet init, Sommet fin)
+{
+  init.degre ++;
+  fin.degre ++;
 }
 
 /*

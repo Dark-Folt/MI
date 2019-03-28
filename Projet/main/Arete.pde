@@ -19,10 +19,10 @@ class Arete
     this.finale = finale;
     this.cout = cout;
 
-    //Je met à jour le degre du sommet 
-    initial.updateDegre();
-    finale.updateDegre();
 
+
+    //Je met à jour le degre du sommet 
+    update_degre(this.initial, this.finale);
 
     /*Je vais ajouter l'initale comme voisin du finale
      et finale comme voisin de initiale

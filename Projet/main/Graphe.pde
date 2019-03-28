@@ -36,9 +36,6 @@ class Graphe
       lesAretes[i] = g.lesAretes[i];
     }
   }
-  
- 
-
 
   //Cette fonction va nous permettre d'avoir le nombre chromatique
   int get_nbChromatique()
