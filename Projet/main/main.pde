@@ -1,30 +1,17 @@
- //<>// //<>//
+//<>// //<>// //<>//
 void setup()
 {
 
   Graphe g = saisie_graphe();
 
-  int[][] adj = adjacence(g);
-
-
-
-
-
-  for (int i=0; i < g.lesAretes.length; i++)
+  for (int i=0; i < g.lesSommets.length; i++)
   {
-    //g.lesAretes[i].initial.getVoisins();
 
-    
-    println("sommet n°:"+g.lesAretes[i].sommets[0].numero+" ----"+"voisin taille :"+g.lesAretes[i].sommets[0].getVoisins().size());
-    
-    //println("voisin taille :"+g.lesAretes[i].sommets[1].getVoisins().size());
+    //ArrayList<Sommet> voisins = g.lesAretes[i].initial.getVoisins();
 
-    int deg1 = g.lesAretes[i].initial.degre;
+    println("Je suis "); //<>//
 
-    int deg2 = g.lesAretes[i].finale.degre;
-
-    //println("init :"+deg1, "finale: "+deg2);
+    // println(voisins.size());
+    //println(g.lesAretes[i].finale.getVoisins().size());
   }
-
-  afficherMatrice(adj);
 }

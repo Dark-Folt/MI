@@ -18,15 +18,15 @@ class Sommet
   int numero;
   int degre;
   int couleur;
-  ArrayList<Sommet>voisins;
+
+  ArrayList<Arete> aretes;
 
 
   Sommet(int numero)
   {
     this.numero = numero;
     this.degre = 0;
-    this.voisins = new ArrayList();
-    //update_degre(this); //J'incremente le degre
+    this.aretes = new ArrayList();
   }
 
   void incrementer_degre()
@@ -34,14 +34,13 @@ class Sommet
     this.degre ++;
   }
 
-  void ajouterVoisin(Sommet v)
-  {
-    this.voisins.add(v);
-  }
 
-  ArrayList<Sommet> getVoisins()
+  void ajouterAretes(ArrayList<Arete> ar)
   {
-    return this.voisins;
+    for (Arete a : ar)
+    {
+      this.aretes.add(a);
+    }
   }
 }
 
@@ -51,11 +50,7 @@ class Sommet
  */
 Sommet saisirSommet(String msg)
 {
-  int numero;
+  int numero = askInteger(msg) ;
 
-  do {
-    numero  = askInteger(msg);
-  } while (numero < 0);
-
-  return new Sommet(numero);
+  return numero <= 0 ? null : new Sommet(numero);
 }

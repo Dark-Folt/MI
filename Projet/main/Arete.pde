@@ -8,43 +8,55 @@
 
 class Arete
 {
-  Sommet initial;  
+  //Sommet initial;  
   Sommet finale;
-  
-  
-  Sommet[] sommets;
+
 
   float cout;
 
-  Arete(Sommet initial, Sommet finale, float cout)
-  {
-    this.initial = initial;
-    this.finale = finale;
-    this.sommets = new Sommet[2];
-    this.sommets[0] = initial;
-    this.sommets[1] = finale;
-    this.cout = cout;
+  /*Arete(Sommet initial, Sommet finale, float cout)
+   {
+   this.initial = initial;
+   this.finale = finale;
+   this.cout = cout;
+   
+   Je vais ajouter l'initale comme voisin du finale
+   et finale comme voisin de initiale
+   
+   this.finale.ajouterVoisin(initial);
+   this.initial.ajouterVoisin(finale);
+   }*/
 
-    /*Je vais ajouter l'initale comme voisin du finale
-     et finale comme voisin de initiale
-     */
-    initial.ajouterVoisin(finale);
-    finale.ajouterVoisin(initial);
+
+  Arete(Sommet finale)
+  {
+    this.finale = finale;
   }
 }
 
 //--------------------------------------------Fonction liéé a la classe Arete
 
 //Cette fonction nous permet de saisir une arete
-Arete saisirArete()
+ArrayList<Arete> saisirArete(int num)
 {
 
-  Sommet initial = saisirSommet("Entrer le sommet initiale");
-  Sommet finale = saisirSommet("Entre le sommet finale");
+  ArrayList<Arete> lesAretes = new ArrayList();
+  //Sommet initial = saisirSommet("Entrer le sommet initiale");
+  Sommet finale = new Sommet(-1);
 
-  float cout = 0;
-  /*do {
+  do {
+    finale = saisirSommet("Pour le sommet "+num+" , entrer le sommet finale");
+    if (finale != null)
+    {
+      lesAretes.add(new Arete(finale));
+    }
+  } while (finale != null);
+
+  /*float cout = 0;
+   do {
    cout = askInteger("Entrer le cout:");
    } while (cout < 0);*/
-  return new Arete(initial, finale, cout);
+  //return new Arete(initial, finale, cout);
+
+  return lesAretes;
 }
