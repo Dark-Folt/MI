@@ -29,7 +29,10 @@ class Sommet
     //update_degre(this); //J'incremente le degre
   }
 
-
+  void incrementer_degre()
+  {
+    this.degre ++;
+  }
 
   void ajouterVoisin(Sommet v)
   {
@@ -39,41 +42,6 @@ class Sommet
   ArrayList<Sommet> getVoisins()
   {
     return this.voisins;
-  }
-}
-
-void update_voisin(Graphe g)
-{
-  int[][] adj = adjacence(g);
-
-  for (int i=0; i < adj.length; i++)
-  {
-    for (int j=0; j < adj[0].length; j++)
-    {
-      if (adj[i][j] == 1)
-      {
-        for (int k=0; k < g.lesAretes.length; k++)
-        {
-          if ((g.lesAretes[k].sommets[0].numero == i && g.lesAretes[k].sommets[1].numero == j) || (g.lesAretes[k].sommets[0].numero == j && g.lesAretes[k].sommets[1].numero == i))
-          {
-            g.lesAretes[k].sommets[0].ajouterVoisin(g.lesAretes[k].sommets[1]);
-            g.lesAretes[k].sommets[1].ajouterVoisin(g.lesAretes[k].sommets[0]);
-          }
-        }
-      }
-    }
-  }
-}
-
-
-void update_degre(Sommet s)
-{
-  ArrayList<Sommet> list = s.getVoisins();
-
-
-  for (int i=0; i < list.size(); i++)
-  {
-    s.degre ++;
   }
 }
 
