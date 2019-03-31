@@ -1,4 +1,4 @@
-import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 
 /*
   Dans cette fonction nous allons crrer une matrice adjacence carrée
@@ -7,7 +7,7 @@ import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
  dans la matrice
  
  */
-<<<<<<< HEAD
+
 /*int[][] adjacence(Graphe g)
 =======
  
