@@ -1,6 +1,4 @@
-
 /*
-
  Cette class va nous permttre de creer un sommet avec:
  un identifiat c'est a dire le numéro du sommet
  son degre qui sera biensure égale à 0
@@ -34,11 +32,6 @@ class Sommet
     this.degre ++;
   }
 
-<<<<<<< HEAD
-  ArrayList<Sommet> getVoisins()
-  {
-    return this.voisins;
-=======
 
   void ajouterAretes(ArrayList<Arete> ar)
   {
@@ -46,7 +39,6 @@ class Sommet
     {
       this.aretes.add(a);
     }
->>>>>>> v1
   }
 }
 

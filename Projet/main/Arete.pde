@@ -8,15 +8,9 @@
 
 class Arete
 {
-<<<<<<< HEAD
-
-  Sommet initial;
-  Sommet finale;
-=======
   //Sommet initial;  
   Sommet finale;
 
->>>>>>> v1
 
   float cout;
 
@@ -37,13 +31,6 @@ class Arete
   Arete(Sommet finale)
   {
     this.finale = finale;
-<<<<<<< HEAD
-    this.cout = cout;
-
-    this.initial.ajouterVoisin(finale);
-    this.finale.ajouterVoisin(initial);
-=======
->>>>>>> v1
   }
 }
 
