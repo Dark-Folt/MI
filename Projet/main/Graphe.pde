@@ -11,9 +11,10 @@ class Graphe
   int n; 
   int nbAretes; 
   Arete[] lesAretes;
+  Sommet[] lesSommets;
 
 
-  Graphe(int n, int nbAretes)
+  /*Graphe(int n, int nbAretes)
   {
     this.n = n;
     this.nbAretes = nbAretes;
@@ -22,12 +23,36 @@ class Graphe
 
     for (int i=0; i < nbAretes; i++)
     {
-      this.lesAretes[i] = saisirArete();
+      //this.lesAretes[i] = saisirArete();
     }
+<<<<<<< HEAD
   }
 
 
   Graphe(Graphe g)
+=======
+  }*/
+
+
+  Graphe(int n)
+  {
+    this.lesSommets = new Sommet[n];
+
+    for (int i=0; i < n; i++)
+    {
+      this.lesSommets[i] = new Sommet(i+1);
+    }
+
+    for (int i=0; i < n; i++)
+    { //<>//
+      ArrayList<Arete> a = saisirArete(i+1);
+      this.lesSommets[i].ajouterAretes(a);
+    }
+  }
+
+
+  /*Graphe(Graphe g)
+>>>>>>> v1
   {
     this.n = g.n;
     this.nbAretes = g.nbAretes;
@@ -36,7 +61,7 @@ class Graphe
     {
       lesAretes[i] = g.lesAretes[i];
     }
-  }
+  }*/
 
   //Cette fonction va nous permettre d'avoir le nombre chromatique
   int get_nbChromatique()
@@ -61,10 +86,12 @@ Graphe saisie_graphe()
     n = askInteger("Entrer le nombre de sommets du graphe:");
   } while (n<0);
 
-  do {
-    nbArete = askInteger("Entrer le nombre d'aretes du graphe:");
-  } while (nbArete < 0);
+  /*do {
+   nbArete = askInteger("Entrer le nombre d'aretes du graphe:");
+   } while (nbArete < 0);*/
 
 
-  return new Graphe(n, nbArete);
+  //return new Graphe(n, nbArete);
+  
+  return new Graphe(n);
 }

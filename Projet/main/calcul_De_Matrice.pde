@@ -1,4 +1,4 @@
-import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 
 /*
   Dans cette fonction nous allons crrer une matrice adjacence carrée
@@ -7,7 +7,13 @@ import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
  dans la matrice
  
  */
+<<<<<<< HEAD
 /*int[][] adjacence(Graphe g)
+=======
+ 
+ /*
+int[][] adjacence(Graphe g)
+>>>>>>> v1
 {
   int taille = g.n;
   int[][] matrice = new int[taille][taille];
@@ -19,7 +25,7 @@ import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
   }  
 
   return matrice;
-}
+}*/
 
 /*Cette fonction va nous permettre de calculer le produit d'une matrice
  Tout d'abord on va érfier */

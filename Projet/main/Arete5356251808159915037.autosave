@@ -1,0 +1,42 @@
+/*
+  Classe Arete
+ 3 proprietées:
+ -le point initial
+ -le point final
+ -le cout
+ */
+
+class Arete
+{
+
+  Sommet initial;
+  Sommet finale;
+
+  float cout;
+
+  Arete(Sommet initial, Sommet finale, float cout)
+  {
+    this.initial = initial;
+    this.finale = finale;git 
+    this.cout = cout;
+
+    this.initial.ajouterVoisin(finale);
+    this.finale.ajouterVoisin(initial);
+  }
+}
+
+//--------------------------------------------Fonction liéé a la classe Arete
+
+//Cette fonction nous permet de saisir une arete
+Arete saisirArete()
+{
+
+  Sommet initial = saisirSommet("Entrer le sommet initiale");
+  Sommet finale = saisirSommet("Entre le sommet finale");
+
+  float cout = 0;
+  /*do {
+   cout = askInteger("Entrer le cout:");
+   } while (cout < 0);*/
+  return new Arete(initial, finale, cout);
+}

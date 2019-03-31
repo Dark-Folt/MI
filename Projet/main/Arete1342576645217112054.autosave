@@ -7,49 +7,30 @@
  */
 
 class Arete
-{
-<<<<<<< HEAD
-
-  Sommet initial;
-  Sommet finale;
-=======
-  //Sommet initial;  
+{ 
   Sommet finale;
 
->>>>>>> v1
 
   float cout;
-
-  /*Arete(Sommet initial, Sommet finale, float cout)
-   {
-   this.initial = initial;
-   this.finale = finale;
-   this.cout = cout;
-   
-   Je vais ajouter l'initale comme voisin du finale
-   et finale comme voisin de initiale
-   
-   this.finale.ajouterVoisin(initial);
-   this.initial.ajouterVoisin(finale);
-   }*/
-
 
   Arete(Sommet finale)
   {
     this.finale = finale;
-<<<<<<< HEAD
-    this.cout = cout;
-
-    this.initial.ajouterVoisin(finale);
-    this.finale.ajouterVoisin(initial);
-=======
->>>>>>> v1
   }
 }
 
 //--------------------------------------------Fonction liéé a la classe Arete
 
-//Cette fonction nous permet de saisir une arete
+
+/*
+Cette fonction nous permet de saisir une arete
+Mais enfaite nous allons demander juste à avoir le sommet finale
+car le sommet initial sera creer dans une autre fonction
+
+Ensuite un foi que chaques points finales de toutes les aretes sera creer
+nous allons retourner une liste d'arete pour juste un seul point et ainsi de suite
+
+ */
 ArrayList<Arete> saisirArete(int num)
 {
 
