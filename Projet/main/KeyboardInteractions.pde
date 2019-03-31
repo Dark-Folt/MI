@@ -5,27 +5,27 @@ int askInteger()
   String r = JOptionPane.showInputDialog(null, "Entrez un entier", "askInteger", JOptionPane.QUESTION_MESSAGE);
   try 
   {
-      i = Integer.parseInt(r);
+    i = Integer.parseInt(r);
   } 
   catch(NumberFormatException e) 
   {
-      println("Ce n'est pas un entier!");
+    println("Ce n'est pas un entier!");
   }
-return i;
+  return i;
 }
 int askInteger(String s)
 {
   int i = 0;
-  String r = JOptionPane.showInputDialog(null,s, "askInteger", JOptionPane.QUESTION_MESSAGE);
+  String r = JOptionPane.showInputDialog(null, s, "askInteger", JOptionPane.QUESTION_MESSAGE);
   try 
   {
-      i = Integer.parseInt(r);
+    i = Integer.parseInt(r);
   } 
   catch(NumberFormatException e) 
   {
-      println("Ce n'est pas un entier!");
+    println("Ce n'est pas un entier!");
   }
-return i;
+  return i;
 }
 float askFloat()
 {
@@ -33,13 +33,13 @@ float askFloat()
   String r = JOptionPane.showInputDialog(null, "Entrez un réel", "askFloat", JOptionPane.QUESTION_MESSAGE);
   try 
   {
-      i = Float.parseFloat(r);
+    i = Float.parseFloat(r);
   } 
   catch(NumberFormatException e) 
   {
-      println("Ce n'est pas un réel!");
+    println("Ce n'est pas un réel!");
   }
-return i;
+  return i;
 }
 float askFloat(String s)
 {
@@ -47,13 +47,13 @@ float askFloat(String s)
   String r = JOptionPane.showInputDialog(null, s, "askFloat", JOptionPane.QUESTION_MESSAGE);
   try 
   {
-      i = Float.parseFloat(r);
+    i = Float.parseFloat(r);
   } 
   catch(NumberFormatException e) 
   {
-      println("Ce n'est pas un réel!");
+    println("Ce n'est pas un réel!");
   }
-return i;
+  return i;
 }
 double askDouble()
 {
@@ -61,13 +61,13 @@ double askDouble()
   String r = JOptionPane.showInputDialog(null, "Entrez un réel", "askDouble", JOptionPane.QUESTION_MESSAGE);
   try 
   {
-      i = Double.parseDouble(r);
+    i = Double.parseDouble(r);
   } 
   catch(NumberFormatException e) 
   {
-      println("Ce n'est pas un réel!");
+    println("Ce n'est pas un réel!");
   }
-return i;
+  return i;
 }
 double askDouble(String s)
 {
@@ -75,13 +75,13 @@ double askDouble(String s)
   String r = JOptionPane.showInputDialog(null, s, "askDouble", JOptionPane.QUESTION_MESSAGE);
   try 
   {
-      i = Double.parseDouble(r);
+    i = Double.parseDouble(r);
   } 
   catch(NumberFormatException e) 
   {
-      println("Ce n'est pas un réel!");
+    println("Ce n'est pas un réel!");
   }
-return i;
+  return i;
 }
 char askChar()
 {
@@ -89,13 +89,13 @@ char askChar()
   String r = JOptionPane.showInputDialog(null, "Entrez un caractère", "askChar", JOptionPane.QUESTION_MESSAGE);
   try 
   {
-      i = r.charAt(0);
+    i = r.charAt(0);
   } 
   catch(NumberFormatException e) 
   {
-      println("Ce n'est pas un caractère!");
+    println("Ce n'est pas un caractère!");
   }
-return i;
+  return i;
 }
 char askChar(String s)
 {
@@ -103,17 +103,17 @@ char askChar(String s)
   String r = JOptionPane.showInputDialog(null, s, "askChar", JOptionPane.QUESTION_MESSAGE);
   try 
   {
-      i = r.charAt(0);
+    i = r.charAt(0);
   } 
   catch(NumberFormatException e) 
   {
-      println("Ce n'est pas un caractère!");
+    println("Ce n'est pas un caractère!");
   }
-return i;
+  return i;
 }
 String askString()
 {
-  
+
   String r = JOptionPane.showInputDialog(null, "Entrez une chaine de caractère", "askString", JOptionPane.QUESTION_MESSAGE);
   return r;
 }

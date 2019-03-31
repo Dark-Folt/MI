@@ -7,7 +7,7 @@ import java.util.Arrays; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
  dans la matrice
  
  */
-int[][] adjacence(Graphe g)
+/*int[][] adjacence(Graphe g)
 {
   int taille = g.n;
   int[][] matrice = new int[taille][taille];

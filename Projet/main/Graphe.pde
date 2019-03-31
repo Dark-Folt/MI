@@ -1,4 +1,4 @@
-/* //<>// //<>// //<>// //<>// //<>//
+/* //<>// //<>// //<>// //<>// //<>// //<>//
  Classe Graph
  3 proprietées:
  -le nombre de sommets
@@ -24,18 +24,7 @@ class Graphe
     {
       this.lesAretes[i] = saisirArete();
     }
-
-
-    for (int i=0; i < lesAretes.length; i++)
-    {
-      update_degre(lesAretes[i].sommets[0]);
-      update_degre(lesAretes[i].sommets[1]);
-    }
-
-    update_voisin(this);
-    
   }
-
 
 
   Graphe(Graphe g)
@@ -56,8 +45,6 @@ class Graphe
     return 0;
   }
 }
-
-
 
 
 

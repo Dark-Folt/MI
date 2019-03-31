@@ -8,11 +8,9 @@
 
 class Arete
 {
-  Sommet initial;  
+
+  Sommet initial;
   Sommet finale;
-  
-  
-  Sommet[] sommets;
 
   float cout;
 
@@ -20,16 +18,10 @@ class Arete
   {
     this.initial = initial;
     this.finale = finale;
-    this.sommets = new Sommet[2];
-    this.sommets[0] = initial;
-    this.sommets[1] = finale;
     this.cout = cout;
 
-    /*Je vais ajouter l'initale comme voisin du finale
-     et finale comme voisin de initiale
-     */
-    initial.ajouterVoisin(finale);
-    finale.ajouterVoisin(initial);
+    this.initial.ajouterVoisin(finale);
+    this.finale.ajouterVoisin(initial);
   }
 }
 
