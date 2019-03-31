@@ -26,7 +26,10 @@ class Sommet
     this.numero = numero;
     this.degre = 0;
     this.voisins = new ArrayList();
+    //update_degre(this); //J'incremente le degre
   }
+
+
 
   void ajouterVoisin(Sommet v)
   {
@@ -39,12 +42,41 @@ class Sommet
   }
 }
 
-
-void update_degre(Sommet init, Sommet fin)
+void update_voisin(Graphe g)
 {
-  init.degre ++;
-  fin.degre ++;
+  int[][] adj = adjacence(g);
+
+  for (int i=0; i < adj.length; i++)
+  {
+    for (int j=0; j < adj[0].length; j++)
+    {
+      if (adj[i][j] == 1)
+      {
+        for (int k=0; k < g.lesAretes.length; k++)
+        {
+          if ((g.lesAretes[k].sommets[0].numero == i && g.lesAretes[k].sommets[1].numero == j) || (g.lesAretes[k].sommets[0].numero == j && g.lesAretes[k].sommets[1].numero == i))
+          {
+            g.lesAretes[k].sommets[0].ajouterVoisin(g.lesAretes[k].sommets[1]);
+            g.lesAretes[k].sommets[1].ajouterVoisin(g.lesAretes[k].sommets[0]);
+          }
+        }
+      }
+    }
+  }
 }
+
+
+void update_degre(Sommet s)
+{
+  ArrayList<Sommet> list = s.getVoisins();
+
+
+  for (int i=0; i < list.size(); i++)
+  {
+    s.degre ++;
+  }
+}
+
 
 /*
   Cette fonction va nous permettre de saisir un sommet et on va au prealable vérifier si l'user à mit une bonne valeur
