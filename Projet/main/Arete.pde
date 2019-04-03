@@ -42,5 +42,5 @@ Arete saisirArete(Sommet[] lesSommets)
     println("idel ref: "+s);
   }
 
-  return new Arete(lesSommets[initiale + 1], lesSommets[finale + 1]);
+  return new Arete(lesSommets[initiale - 1], lesSommets[finale - 1]);
 }
