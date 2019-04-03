@@ -33,6 +33,8 @@ class Graphe
 
     //Je met à jour les degrés des sommets
     update_degre();
+
+    update_color();
   }
 
   /*
@@ -83,16 +85,50 @@ class Graphe
   //gestion des couleurs pour les sommets
   private void update_color()
   {
-    /*je trie les degres et je creer un tab de couleur*/
-    Arrays.sort(this.lesSommets);
-    this.couleurs = new int[this.lesSommets[0].degre];
-    
-    
+    /*on va supposer tout d'abord que la couleur du premier
+     sommet sera la plus petite et donc 1
+     
+     */
+    this.lesSommets[0].couleur = 1;
+
+    //Je vais gerer si les mêmes couleurs
+    for (Sommet s : this.lesSommets)
+    {
+      for (Sommet v : s.voisins)
+      {
+        if ((s.couleur == v.couleur))
+        {
+          v.couleur = get_couleur(s.couleur);
+        }
+      }
+    }
   }
 
-  private int get_min(int[] tab)
+  //Me donne une couleur qui n'est pas attribué au voisin
+  private int get_couleur(int coul)
   {
-    return 0;
+    /*je trie les degres et je creer un tab de couleur que je vais remplir automatiquement*/
+    Arrays.sort(this.lesSommets);
+    this.couleurs = new int[this.lesSommets[0].degre];
+
+    for (int i=0; i < this.couleurs.length; i++)
+    {
+      this.couleurs[i] = i+1;
+    }
+
+    for (int i=0; i < this.couleurs.length; i++)
+    {
+      int c = int(random(0, this.couleurs.length+1));
+
+      if (c != coul)
+      {
+        coul = c;
+
+        return coul;
+      }
+    }
+
+    return couleurs[int(random(this.couleurs.length))];
   }
 
   //Affichage des details du graphe
