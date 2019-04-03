@@ -20,6 +20,7 @@ class Graphe
       this.lesSommets[i] = new Sommet(i+1);
     }
 
+  //Je parcour tout mes sommets initiales et je leur donne un sommet finale
     for (int i=0; i < n; i++)
     {
       ArrayList<Arete> a = saisirArete(i+1);

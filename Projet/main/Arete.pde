@@ -29,7 +29,7 @@ ArrayList<Arete> saisirArete(int num)
   Sommet finale;
 
   do {
-    finale = saisirSommet("Pour le sommet "+num+" , entrer le sommet finale");
+    finale = saisirSommet("Pour le sommet "+num+" , entrer le sommet finale si possible (Null ou 0)");
     if (finale != null)
     {
       lesAretes.add(new Arete(finale));
