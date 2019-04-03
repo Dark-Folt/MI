@@ -127,8 +127,9 @@ class Graphe
         return coul;
       }
     }
+    int cs = couleurs[int(random(this.couleurs.length))]; // juste une couleur au cas ou
 
-    return couleurs[int(random(this.couleurs.length))];
+    return coul==1 ? cs : 0;
   }
 
   //Affichage des details du graphe
