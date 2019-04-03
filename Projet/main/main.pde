@@ -21,8 +21,8 @@ void setup()
 
   g.afficher_detail();
 
-  /* for(int i=0; i < g.n; i++)
+   /*for(int i=0; i < g.n; i++)
    {
-   println(3);
+   println(3); //<>//
    }*/
 }

@@ -80,6 +80,21 @@ class Graphe
     }
   }
 
+  //gestion des couleurs pour les sommets
+  private void update_color()
+  {
+    /*je trie les degres et je creer un tab de couleur*/
+    Arrays.sort(this.lesSommets);
+    this.couleurs = new int[this.lesSommets[0].degre];
+    
+    
+  }
+
+  private int get_min(int[] tab)
+  {
+    return 0;
+  }
+
   //Affichage des details du graphe
   void afficher_detail()
   {
