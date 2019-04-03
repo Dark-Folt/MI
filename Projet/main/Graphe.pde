@@ -27,9 +27,8 @@ class Graphe
     {
       this.lesAretes.add(saisirArete(lesSommets));
     }
-
-
-
+    
+    //Je met à jour les degrés des sommets
     update_degre();
   }
 
@@ -51,7 +50,7 @@ class Graphe
     return matrice;
   }
 
-
+  
   void update_degre()
   {
     int[][] adj = get_adjacence();
@@ -67,9 +66,8 @@ class Graphe
       }
     }
   }
-
-
-
+  
+  
   int get_color()
   {
     int colorMax = this.n;
@@ -81,7 +79,7 @@ class Graphe
   {    
     for (Sommet s : lesSommets)
     {
-      println("degre : "+s.degre);
+      println("Le sommet "+s.numero+" degre: "+s.degre);
     }
   }
 }
