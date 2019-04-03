@@ -1,4 +1,4 @@
-/*
+/* //<>//
 Pour cet algo, nous avons modifié la logique de l'algo donné en class pour le TP commun
  Au lieu que dans un graphe il y 'est des aretes et que dans la aretes des points
  
@@ -12,17 +12,7 @@ void setup()
 
   Graphe g = saisie_graphe();
 
-
-
-  //afficherMatrice(adjacence(g));
-
   afficherMatrice(g.get_adjacence());
 
-
   g.afficher_detail();
-
-   /*for(int i=0; i < g.n; i++)
-   {
-   println(3); //<>//
-   }*/
 }

@@ -129,7 +129,7 @@ class Graphe
     }
     int cs = couleurs[int(random(this.couleurs.length))]; // juste une couleur au cas ou
 
-    return coul==1 ? cs : 0;
+    return coul==1 ? cs : cs;
   }
 
   //Affichage des details du graphe
