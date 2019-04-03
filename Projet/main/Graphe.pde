@@ -29,6 +29,22 @@ class Graphe
     }
   }
 
+  int[][] adjacence()
+  {
+
+    int taille = this.n;
+    int[][] matrice = new int[taille][taille];
+
+    for (int i=0; i < this.nbAretes; i++)
+    {
+      matrice[this.lesAretes.get(i).initiale_1.numero - 1][this.lesAretes.get(i).finale_1.numero - 1] = 1;
+
+      matrice[this.lesAretes.get(i).initiale_2.numero - 1][this.lesAretes.get(i).finale_2.numero - 1] = 1;
+    }
+
+    return matrice;
+  }
+
 
   int get_color()
   {
