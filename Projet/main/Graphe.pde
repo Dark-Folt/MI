@@ -18,7 +18,7 @@ class Graphe
     this.n = n;
     this.nbAretes = nbAretes;
 
-    this.lesSommets = init(n);
+    this.lesSommets = init(this.n);
     this.lesAretes = new ArrayList();
 
 
@@ -46,8 +46,8 @@ class Graphe
 
     return matrice;
   }
-  
-  
+
+
 
   int get_color()
   {

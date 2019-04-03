@@ -14,7 +14,9 @@ void setup()
 
 
 
-  afficherMatrice(adjacence(g));
+  //afficherMatrice(adjacence(g));
+
+  afficherMatrice(g.get_adjacence());
 
   /*for (int i=0; i < g.lesAretes.size(); i++)
    {
