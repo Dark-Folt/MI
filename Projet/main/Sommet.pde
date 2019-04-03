@@ -27,11 +27,6 @@ class Sommet
     this.aretes = new ArrayList();
   }
 
-  void incrementer_degre()
-  {
-    this.degre ++;
-  }
-
 
   //À chque fois que j'ai un point finale , je creer une arete et je l'ajoute à la liste
   void ajouterAretes(ArrayList<Arete> ar)

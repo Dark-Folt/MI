@@ -26,15 +26,11 @@ class Graphe
       ArrayList<Arete> a = saisirArete(i+1);
       this.lesSommets[i].ajouterAretes(a);
     }
+    
+    
+    
   }
 
-
-  //Cette fonction va nous permettre d'avoir le nombre chromatique
-  int get_nbChromatique()
-  {
-
-    return 0;
-  }
 }
 
 
