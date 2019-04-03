@@ -12,7 +12,6 @@ class Arete
   Sommet initiale_2;
   Sommet finale_2;
 
-
   Arete(Sommet initiale_1, Sommet finale_1)
   {
     this.initiale_1 = initiale_1;
@@ -36,13 +35,6 @@ Arete saisirArete(Sommet[] lesSommets)
 
   int initiale = askInteger("Entrer le point initiale");
   int finale = askInteger("Entrer le point finale");
-
-
-
-  /*for (Sommet s : lesSommets)
-   {
-   println("idel ref: "+s);
-   }*/
 
   return new Arete(lesSommets[initiale - 1], lesSommets[finale - 1]);
 }

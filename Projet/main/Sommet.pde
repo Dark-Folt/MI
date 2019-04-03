@@ -18,12 +18,20 @@ class Sommet implements Comparable
   int numero;
   int degre;
   int couleur;
+  ArrayList<Sommet> voisins;
 
   Sommet(int numero)
   {
     this.numero = numero;
     this.degre = 0;
     this.couleur = 0;
+    this.voisins = new ArrayList();
+  }
+
+
+  void ajouter_voisin(Sommet v)
+  {
+    this.voisins.add(v);
   }
 
   void incremente_degre()
@@ -31,21 +39,10 @@ class Sommet implements Comparable
     this.degre += 1;
   }
 
+  //Fonctino de comparateur pour trier les degre de facon decroissant
   int compareTo(Object sm)
   {
     Sommet s = (Sommet)sm;
-
-    /*if (j.but > but)
-     {
-     return -1;
-     } else if (j.but < but)
-     {
-     return 1;
-     } else
-     {
-     return 0;
-     }*/
-
     return s.degre > this.degre ? 1 : s.degre < this.degre ? -1 : 0;
   }
 }

@@ -1,6 +1,8 @@
-/* //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+import java.util.ArrayList; //<>//
+
+/* //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
  Classe Graph
- 3 proprietées:
+ 3 proprietées:t
  le nombre de sommet
  
  */
@@ -9,6 +11,7 @@ class Graphe
 {
   int n;
   int nbAretes;
+  int[] couleurs;
   Sommet[] lesSommets;
   ArrayList<Arete> lesAretes;
 
@@ -50,37 +53,34 @@ class Graphe
     return matrice;
   }
 
+
   //Me permetra de mettre à jour les degrés des sommets
   void update_degre()
   {
     int[][] adj = get_adjacence();
 
-
-    //J'initialise le premier sommet avec une couleur
-    this.lesSommets[0].couleur = 1; 
-
+    //Processus pour l'incrementation des degre
     for (int i=0; i < this.n; i++)
     {
       for (int j=0; j < this.n; j++ )
       {
-
         //Cette condition me permet juste d'incrementer les degrées
         if (adj[this.lesSommets[i].numero - 1][j] == 1)
         {
           this.lesSommets[i].incremente_degre();
+
+          //Ajout des voisins pour les couleurs
+          if (!(this.lesSommets[i].voisins.contains(this.lesSommets[j])) && !(this.lesSommets[j].voisins.contains(this.lesSommets[i])))
+          {
+            this.lesSommets[i].ajouter_voisin(this.lesSommets[j]);
+            this.lesSommets[j].ajouter_voisin(this.lesSommets[i]);
+          }
         }
       }
     }
   }
 
-
-  int get_color()
-  {
-    int colorMax = this.n + 1;
-
-    return int(random(1, colorMax));
-  }
-
+  //Affichage des details du graphe
   void afficher_detail()
   {
     //Je trie par ordre décroissant grace à Comparable
