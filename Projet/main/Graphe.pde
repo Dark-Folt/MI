@@ -54,7 +54,7 @@ class Graphe
   void afficher_detail()
   {
 
-    //println("sommet "+lesSommets[0].numero+" Couleur: "+lesSommets[0].couleur);
+    println("sommet "+lesSommets[0].numero+" Couleur: "+lesSommets[0].couleur);
 
     for (Arete a : lesSommets[0].aretes)
     {
