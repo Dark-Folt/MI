@@ -9,12 +9,14 @@ class Graphe
 {
   int n; 
   Sommet[] lesSommets;
+  ArrayList<Arete> lesAretes;
 
 
   Graphe(int n)
   {
     this.n = n;
-    lesSommets = init(n);
+    this.lesSommets = init(n);
+    this.lesAretes = new ArrayList();
   }
 
   int get_color()

@@ -24,29 +24,11 @@ class Arete
 Pour creer une arete on va juste avoir besoin du sommet finale car 
  il sera automatiquement associé à un point initiale
  */
- 
- Arete saisirArete()
- {
-   
-   
-   return null;
- }
- 
- 
-ArrayList<Arete> saisirArete(int num)
+
+Arete saisirArete(Sommet[] lesSommets)
 {
+  int initiale = askInteger("Entrer le point initiale");
+  int finale = askInteger("Entrer le point finale");
 
-  ArrayList<Arete> lesAretes = new ArrayList();
-
-  Sommet finale;
-
-  do {
-    finale = saisirSommet();
-    if (finale != null)
-    {
-      lesAretes.add(new Arete(finale));
-    }
-  } while (finale != null);
-
-  return lesAretes;
+  return new Arete(lesSommets[initiale + 1], lesSommets[finale + 1]);
 }
