@@ -27,6 +27,10 @@ class Graphe
     {
       this.lesAretes.add(saisirArete(lesSommets));
     }
+
+
+
+    update_degre();
   }
 
   /*
@@ -45,6 +49,23 @@ class Graphe
     }
 
     return matrice;
+  }
+
+
+  void update_degre()
+  {
+    int[][] adj = get_adjacence();
+
+    for (int i=0; i < this.n; i++)
+    {
+      for (int j=0; j < this.n; j++ )
+      {
+        if (adj[lesSommets[i].numero - 1][j] == 1)
+        {
+          lesSommets[i].incremente_degre();
+        }
+      }
+    }
   }
 
 
