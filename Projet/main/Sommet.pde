@@ -43,6 +43,7 @@ Sommet[] init(int n)
   for (int i=0; i < n; i++)
   {
     sommets[i] = new Sommet(i+1);
+    println("current ref: "+sommets[i]);
   }
 
   return sommets;
