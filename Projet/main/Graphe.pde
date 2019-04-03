@@ -23,28 +23,15 @@ class Graphe
 
 
     //Je vais remplir mon tableau d'arete avec les reference des points déjà creés
-    for (int i=0; i < nbAretes; i++ )
+    for (int i=0; i < nbAretes; i++)
     {
       this.lesAretes.add(saisirArete(lesSommets));
     }
-
-    //J'incremente les degré
-    /*lesSommets[1].incremente_degre();
-     lesSommets[1].incremente_degre();
-     */
-
-    for (Arete a : this.lesAretes)
-    {
-      for (Sommet s : this.lesSommets)
-      {
-        if ((a.initiale_1 == s) || (a.finale_1 == s))
-        {
-          println(s.numero);
-        }
-      }
-    }
   }
 
+  /*
+  Matrice d'adjacence du graphe non orienté
+   */
   int[][] get_adjacence()
   {
     int taille = this.n;
@@ -59,7 +46,8 @@ class Graphe
 
     return matrice;
   }
-
+  
+  
 
   int get_color()
   {

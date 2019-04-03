@@ -38,7 +38,7 @@ Sommet saisirSommet()
     num = askInteger("Entrer le numero du sommet");
   } while (num <= 0);
 
-  return new Sommet(0);
+  return new Sommet(num);
 }
 
 /*Initialisation du tableau de sommet qui sera directement creer des que l'user aura mit une taille*/
@@ -51,6 +51,9 @@ Sommet[] init(int n)
    sommets[i] = new Sommet(i+1);
    println("current ref: "+sommets[i]);
    }*/
+   
+   
+   println("ok");
 
   return sommets;
 }

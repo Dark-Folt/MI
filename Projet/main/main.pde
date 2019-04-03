@@ -14,13 +14,13 @@ void setup()
 
 
 
-  //afficherMatrice(g.get_adjacence());
+  afficherMatrice(adjacence(g));
 
-  for (int i=0; i < g.lesAretes.size(); i++)
-  {
-    println("sommet "+g.lesAretes.get(i).initiale_1.numero +"de degre :" +g.lesAretes.get(i).initiale_1.degre);
-    println("sommet "+g.lesAretes.get(i).finale_1.numero +"de degre :" +g.lesAretes.get(i).finale_1.degre);
-  }
+  /*for (int i=0; i < g.lesAretes.size(); i++)
+   {
+   println("sommet "+g.lesAretes.get(i).initiale_1.numero +"de degre :" +g.lesAretes.get(i).initiale_1.degre);
+   println("sommet "+g.lesAretes.get(i).finale_1.numero +"de degre :" +g.lesAretes.get(i).finale_1.degre);
+   }*/
 
   g.afficher_detail();
 

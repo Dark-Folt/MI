@@ -16,11 +16,11 @@ int[][] adjacence(Graphe g)
   int taille = g.n;
   int[][] matrice = new int[taille][taille];
 
-  for (int i=0; i < g.nbAretes; i++)
+  for (int i=1; i < g.nbAretes; i++)
   {
-    matrice[g.lesAretes.get(i).initiale_1.numero - 1][g.lesAretes.get(i).finale_1.numero - 1] = 1;
+    matrice[g.lesAretes.get(i-1).initiale_1.numero - 1][g.lesAretes.get(i-1).finale_1.numero - 1] = 1;
 
-    matrice[g.lesAretes.get(i).initiale_2.numero - 1][g.lesAretes.get(i).finale_2.numero - 1] = 1;
+    matrice[g.lesAretes.get(i-1).initiale_2.numero - 1][g.lesAretes.get(i-1).finale_2.numero - 1] = 1;
   }
 
   return matrice;
