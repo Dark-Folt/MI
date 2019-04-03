@@ -50,7 +50,7 @@ class Graphe
     return matrice;
   }
 
-  
+  //Me permetra de mettre à jour les degrés des sommets
   void update_degre()
   {
     int[][] adj = get_adjacence();
@@ -76,7 +76,10 @@ class Graphe
   }
 
   void afficher_detail()
-  {    
+  {
+    //Je trie par ordre décroissant grace à Comparable
+    Arrays.sort(lesSommets);
+    
     for (Sommet s : lesSommets)
     {
       println("Le sommet "+s.numero+" degre: "+s.degre);

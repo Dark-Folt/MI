@@ -1,3 +1,8 @@
+import java.util.*;
+
+
+
+
 /*
  Cette class va nous permttre de creer un sommet avec:
  un identifiat c'est a dire le numéro du sommet
@@ -11,7 +16,7 @@
  -getVoisins: nous renvoie une list contenant tout les voisins du sommet actuel
  */
 
-class Sommet
+class Sommet implements Comparable
 {
   int numero;
   int degre;
@@ -27,6 +32,25 @@ class Sommet
   void incremente_degre()
   {
     this.degre += 1;
+  }
+
+  int compareTo(Object sm)
+  {
+
+    Sommet s = (Sommet)sm;
+
+    /*if (j.but > but)
+     {
+     return -1;
+     } else if (j.but < but)
+     {
+     return 1;
+     } else
+     {
+     return 0;
+     }*/
+
+    return s.degre > this.degre ? 1 : s.degre < this.degre ? -1 : 0;
   }
 }
 
