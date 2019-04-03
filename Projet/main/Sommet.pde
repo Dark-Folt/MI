@@ -36,6 +36,7 @@ Sommet saisirSommet()
   return new Sommet(0);
 }
 
+/*Initialisation du tableau de sommet qui sera directement creer des que l'user aura mit une taille*/
 Sommet[] init(int n)
 {
   Sommet[] sommets = new Sommet[n];

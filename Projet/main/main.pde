@@ -13,5 +13,10 @@ void setup()
   Graphe g = saisie_graphe();
 
   g.afficher_detail();
- //<>//
+  
+  for(int i=0; i < g.n; i++)
+  {
+    println(3);
+  }
+
 }
