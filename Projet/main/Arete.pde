@@ -6,10 +6,13 @@
 
 class Arete
 { 
+  Sommet initiale;
   Sommet finale;
 
-  Arete(Sommet finale)
+
+  Arete(Sommet initiale, Sommet finale)
   {
+    this.initiale = initiale;
     this.finale = finale;
   }
 }
@@ -19,8 +22,17 @@ class Arete
 //Cette fonction nous permet de saisir une arete
 /*
 Pour creer une arete on va juste avoir besoin du sommet finale car 
-il sera automatiquement associé à un point initiale
-*/
+ il sera automatiquement associé à un point initiale
+ */
+ 
+ Arete saisirArete()
+ {
+   
+   
+   return null;
+ }
+ 
+ 
 ArrayList<Arete> saisirArete(int num)
 {
 
@@ -29,7 +41,7 @@ ArrayList<Arete> saisirArete(int num)
   Sommet finale;
 
   do {
-    finale = saisirSommet("Pour le sommet "+num+" , entrer le sommet finale si possible (Null ou 0)");
+    finale = saisirSommet();
     if (finale != null)
     {
       lesAretes.add(new Arete(finale));

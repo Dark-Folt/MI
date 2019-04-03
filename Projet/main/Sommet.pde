@@ -25,7 +25,6 @@ class Sommet
   }
 }
 
-
 Sommet saisirSommet()
 {
   int num ;
@@ -35,4 +34,16 @@ Sommet saisirSommet()
   } while (num <= 0);
 
   return new Sommet(0);
+}
+
+Sommet[] init(int n)
+{
+  Sommet[] sommets = new Sommet[n];
+
+  for (int i=0; i < n; i++)
+  {
+    sommets[i] = new Sommet(i+1);
+  }
+
+  return sommets;
 }

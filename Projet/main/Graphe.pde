@@ -14,34 +14,7 @@ class Graphe
   Graphe(int n)
   {
     this.n = n;
-
-    this.lesSommets = new Sommet[n];
-
-    for (int i=0; i < n; i++)
-    {
-      this.lesSommets[i] = new Sommet(i+1);
-      //Je vais donner une couleur à chaque sommet
-      this.lesSommets[i].couleur = get_color();
-    }
-
-    //Je parcour tout mes sommets initiales et je leur donne un sommet finale
-    for (int i=0; i < n; i++)
-    {
-      ArrayList<Arete> a = saisirArete(i+1);
-      this.lesSommets[i].ajouterAretes(a);
-
-      //Je parcour toutes les aretes qui composent un sommet,ensuite je vérifier la correspondance des couleures
-      for (Arete ar : lesSommets[i].aretes)
-      {
-        //Tant que la couleur est la meme alors je boucle jusqu'à avoir une autre.
-        while (ar.finale.couleur == lesSommets[i].couleur)
-        {
-          ar.finale.couleur = get_color();
-
-          println("ar : "+ar.finale.couleur+" || s :"+lesSommets[i].couleur);
-        }
-      }
-    }
+    lesSommets = init(n);
   }
 
   int get_color()
@@ -53,13 +26,6 @@ class Graphe
 
   void afficher_detail()
   {
-
-    println("sommet "+lesSommets[0].numero+" Couleur: "+lesSommets[0].couleur);
-
-    for (Arete a : lesSommets[0].aretes)
-    {
-      println("Somomet "+a.finale.numero+" Couleur: "+a.finale.couleur);
-    }
   }
 }
 

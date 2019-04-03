@@ -6,10 +6,12 @@ Nous avons changé la loque pour avoir dans chaque sommet un tableau d'arete qui
 Donc la logique nous dit que chaque sommet à des aretes qui lui sont associés.
 
 */
+
 void setup()
 {
 
   Graphe g = saisie_graphe();
+
   g.afficher_detail();
  //<>//
 }
