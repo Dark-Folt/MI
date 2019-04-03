@@ -78,11 +78,10 @@ class Graphe
   }
 
   void afficher_detail()
-  {
-    for (int i=0; i < this.lesAretes.size(); i++)
+  {    
+    for (Sommet s : lesSommets)
     {
-      println("sommet "+this.lesAretes.get(i).initiale_1.numero +" de degre :" +this.lesAretes.get(i).initiale_1.degre);
-      //println("sommet "+g.lesAretes.get(i).finale_1.numero +"de degre :" +g.lesAretes.get(i).finale_1.degre);
+      println("degre : "+s.degre);
     }
   }
 }
