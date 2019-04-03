@@ -10,4 +10,6 @@ void setup()
 {
 
   Graphe g = saisie_graphe();
+  g.afficher_detail();
+ //<>//
 }

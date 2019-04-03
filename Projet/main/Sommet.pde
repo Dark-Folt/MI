@@ -36,16 +36,14 @@ class Sommet
       this.aretes.add(a);
     }
   }
-  
-  
+
+
   int getDegre()
   {
-    
+
     //la taille du nombres d'aretes issus d'un point correspoind à son degre
     return aretes.size();
   }
-  
-
 }
 
 
