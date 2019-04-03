@@ -23,6 +23,11 @@ class Sommet
     this.degre = 0;
     this.couleur = 0;
   }
+
+  void incremente_degre()
+  {
+    this.degre += 1;
+  }
 }
 
 Sommet saisirSommet()
@@ -41,11 +46,11 @@ Sommet[] init(int n)
 {
   Sommet[] sommets = new Sommet[n];
 
-  for (int i=0; i < n; i++)
-  {
-    sommets[i] = new Sommet(i+1);
-    println("current ref: "+sommets[i]);
-  }
+  /*for (int i=0; i < n; i++)
+   {
+   sommets[i] = new Sommet(i+1);
+   println("current ref: "+sommets[i]);
+   }*/
 
   return sommets;
 }

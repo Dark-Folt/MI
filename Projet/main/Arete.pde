@@ -37,10 +37,12 @@ Arete saisirArete(Sommet[] lesSommets)
   int initiale = askInteger("Entrer le point initiale");
   int finale = askInteger("Entrer le point finale");
 
-  for (Sommet s : lesSommets)
-  {
-    println("idel ref: "+s);
-  }
+
+
+  /*for (Sommet s : lesSommets)
+   {
+   println("idel ref: "+s);
+   }*/
 
   return new Arete(lesSommets[initiale - 1], lesSommets[finale - 1]);
 }
