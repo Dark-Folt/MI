@@ -107,7 +107,7 @@ int nbChemins(int[][] matrice, int n, int i, int j)
 {
   int[][] m = puissance_matrice(matrice, n);
 
-  return m[i-1][j-1];
+  return m[i][j];
 }
 
 /*

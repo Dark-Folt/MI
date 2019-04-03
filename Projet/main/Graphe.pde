@@ -27,7 +27,7 @@ class Graphe
     {
       this.lesAretes.add(saisirArete(lesSommets));
     }
-    
+
     //Je met à jour les degrés des sommets
     update_degre();
   }
@@ -55,34 +55,40 @@ class Graphe
   {
     int[][] adj = get_adjacence();
 
+
+    //J'initialise le premier sommet avec une couleur
+    this.lesSommets[0].couleur = 1; 
+
     for (int i=0; i < this.n; i++)
     {
       for (int j=0; j < this.n; j++ )
       {
-        if (adj[lesSommets[i].numero - 1][j] == 1)
+
+        //Cette condition me permet juste d'incrementer les degrées
+        if (adj[this.lesSommets[i].numero - 1][j] == 1)
         {
-          lesSommets[i].incremente_degre();
+          this.lesSommets[i].incremente_degre();
         }
       }
     }
   }
-  
-  
+
+
   int get_color()
   {
-    int colorMax = this.n;
+    int colorMax = this.n + 1;
 
-    return int(random(colorMax));
+    return int(random(1, colorMax));
   }
 
   void afficher_detail()
   {
     //Je trie par ordre décroissant grace à Comparable
     Arrays.sort(lesSommets);
-    
+
     for (Sommet s : lesSommets)
     {
-      println("Le sommet "+s.numero+" degre: "+s.degre);
+      println("Le sommet "+s.numero+" degre: "+s.degre+ " de couleur: "+s.couleur);
     }
   }
 }

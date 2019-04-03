@@ -1,8 +1,5 @@
 import java.util.*;
 
-
-
-
 /*
  Cette class va nous permttre de creer un sommet avec:
  un identifiat c'est a dire le numéro du sommet
@@ -36,7 +33,6 @@ class Sommet implements Comparable
 
   int compareTo(Object sm)
   {
-
     Sommet s = (Sommet)sm;
 
     /*if (j.but > but)
